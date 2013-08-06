@@ -2,7 +2,7 @@ ZipHelper
 =========
 
 Example:
-===
+=
 
 ```php
 $oZipHelper = new ZipHelper("my_archiv.zip");
