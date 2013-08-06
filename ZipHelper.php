@@ -10,13 +10,13 @@
  * $oZipHelper = new ZipHelper("my_archiv.zip");
  * 
  * $oZipHelper->addSource('*.txt')
- *   		  ->addSource('*.php')
- * 			  ->addSource('../')
- * 			  ->addSource('/test.txt')
- * 			  ->addSource(array('/home/sklueh/write.sh', 
- * 				   			    '/home/sklueh/config.php'))
- * 			  ->addSource('/home/sklueh/my_directory')
- * 			  ->create();
+ *   	      ->addSource('*.php')
+ * 	      ->addSource('../')
+ * 	      ->addSource('/test.txt')
+ * 	      ->addSource(array('/home/sklueh/write.sh', 
+ * 	      		        '/home/sklueh/config.php'))
+ *    	      ->addSource('/home/sklueh/my_directory')
+ * 	      ->create();
  */
 class ZipHelper
 {
@@ -67,10 +67,10 @@ class ZipHelper
 	        if($oItem->isDir())
 	        {
 	        	if(!$oItem->isDot())
-				$this->iterateDir($oItem->getPathname());				
-	            continue;
+			$this->iterateDir($oItem->getPathname());				
+	            	continue;
 	        }
-			$this->oZipArchive->addFile($oItem->getPathname(), $this->removeParentDir($oItem->getPathname()));
+		$this->oZipArchive->addFile($oItem->getPathname(), $this->removeParentDir($oItem->getPathname()));
 	    }
 	}
 	
@@ -80,9 +80,9 @@ class ZipHelper
 	}
 	
 	private function correctPath($sTargetPath)
-  {
-    return str_replace("//", "/",
-           str_replace("\\", "/", $sTargetPath));
-  }
+	{
+		return str_replace("//", "/",
+	   	       str_replace("\\", "/", $sTargetPath));
+	}
 }
 ?>
