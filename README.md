@@ -1,9 +1,8 @@
 ZipHelper
 =========
-
+A simple class for creating zip files.
 
 **Example:**
-
 ```php
 $oZipHelper = new ZipHelper("my_archiv.zip");
 
