@@ -15,3 +15,7 @@ $oZipHelper->addSource('*.txt')
            ->addSource('/home/sklueh/my_directory')
            ->create();
 ```
+
+For more information visit the following link:
+
+http://sklueh.de/2013/08/php-zip-archiv-erstellen/
